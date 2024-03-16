@@ -284,27 +284,6 @@ Object.keys(counters).forEach(item => {
     
 document.getElementById('chapo').addEventListener('click', function() {
 
-            var searchName = prompt("What name do you want to search for");
-            fetch('/sendSearchName', {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ value: searchName})
-            })
-            .then(response => {
-                if (response.ok) {
-                console.log('Value sent to server successfully');
-                } else {
-                console.error('Error sending value to server');
-                }
-            })
-            .catch(error => {
-                console.error('Error sending value to server:', error);
-            });
-
-
-
                             var quantity = prompt(`Enter the quantity of chapati:`);
                             var quantityNumber = Number(quantity);
 
